@@ -1,0 +1,17 @@
+{
+    "name": "nu_auto_totp",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "名古屋大学多要素認証自動入力ツール",
+    "content_scripts": [{
+        "matches": ["https://auth-mfa.nagoya-u.ac.jp/cas/login*"],
+        "js": [
+            "js/jsrsasign-rsa-min.js",
+            "js/totp.js",
+            "js/autofill.js"
+        ]
+    }],
+    "permissions": [
+        "storage"
+    ]
+}
